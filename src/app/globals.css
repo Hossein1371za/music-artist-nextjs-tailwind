@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: "vazir";
-  src: url("../assets/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Medium.ttf");
+  src: url("/assets/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Medium.ttf");
 }
 
 @font-face {
   font-family: "vazir-digits";
-  src: url("../assets/vazirmatn-v33.003/misc/Farsi-Digits/fonts/ttf/Vazirmatn-FD-Black.ttf");
+  src: url("/assets/vazirmatn-v33.003/misc/Farsi-Digits/fonts/ttf/Vazirmatn-FD-Black.ttf");
 }
 
 
@@ -55,7 +55,7 @@ body {
   @apply bg-white text-primary hover:bg-white/80;
 }
 .section{
-  @apply py-12 xl:py-24px;
+  @apply py-12 xl:py-24;
 }
 
 
