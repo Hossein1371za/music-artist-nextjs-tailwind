@@ -30,21 +30,68 @@ const Hero = () => {
             globalFactorX={0.1}
             globalFactorY={0.2}
             resetOnLeave
-            className="relative flex items-center h-[120px] xl:h-max xl:w-[840px]"
+            className="relative flex flex-end items-center h-[120px] xl:h-max xl:w-[840px]"
           >
-            <MouseParallaxChild className="relative">
-              <div className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]">
+            <MouseParallaxChild
+              factorX={0.2}
+              factorY={0.4}
+              className="relative"
+            >
+              <motion.div
+              variants={fadeIn("up",0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{once:false,amount:0.3}}
+              className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]">
                 <Image
                   src={"/assets/hero/typo-1.svg"}
                   fill
                   alt=""
                   className="object-contain"
                 />
-              </div>
+              </motion.div>
+            </MouseParallaxChild>
+            <MouseParallaxChild
+              factorX={0.9}
+              factorY={0.9}
+              className="absolute xl:right-16 z-30"
+            >
+              <motion.div
+              variants={fadeIn("up",0.7)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{once:false,amount:0.3}}
+              className="w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]">
+                <Image
+                  src={"/assets/hero/typo-2.svg"}
+                  fill
+                  alt=""
+                  className="object-contain"
+                />
+              </motion.div>
+            </MouseParallaxChild>
+            <MouseParallaxChild
+              factorX={0.3}
+              factorY={0.6}
+              className="hidden xl:flex absolute right-0 z-20 opacity-80"
+            >
+              <motion.div
+              variants={fadeIn("left",1.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{once:false,amount:0.3}}
+              className="w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity">
+                <Image
+                  src={"/assets/hero/bird.png"}
+                  fill
+                  alt=""
+                  className="object-contain"
+                />
+              </motion.div>
             </MouseParallaxChild>
           </MouseParallaxContainer>
         </div>
-        <div className="hidden xl:flex absolute left-0 top-0 before:w-[784px] before:h-[893px] before:absolute before:right-0 before:top-0 before:bg-singerOverlay before:z-10">
+        <div className="hidden xl:flex absolute left-0 top-0">
           <Image
             src={"/assets/hero/singer.png"}
             width={617}
