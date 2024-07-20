@@ -93,7 +93,12 @@ const Hero = () => {
               </motion.div>
             </MouseParallaxChild>
           </MouseParallaxContainer>
-          <div className="min-h-[60px] flex items-center justify-center mb-6">
+          <motion.div
+          variants={fadeIn("up",1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
+          className="min-h-[60px] flex items-center justify-center mb-6 text-[26px]">
             <div className="hidden xl:flex items-center xl:gap-x-0">
               <div>ایران</div>
               <div className="relative w-2 h-2 mx-2 flex items-center justify-center">
@@ -116,7 +121,15 @@ const Hero = () => {
               repeat={Infinity}
               cursor={false}
             />
-          </div>
+          </motion.div>
+          <motion.div
+          variants={fadeIn("up",1.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{once:false,amount:0.7}}
+          >
+            <button className="btn btn-lg btn-accent">دریافت بلیط</button>
+          </motion.div>
         </div>
         <div className="hidden xl:flex absolute left-0 top-0">
           <Image
