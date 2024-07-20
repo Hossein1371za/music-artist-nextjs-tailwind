@@ -38,11 +38,12 @@ const Hero = () => {
               className="relative"
             >
               <motion.div
-              variants={fadeIn("up",0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{once:false,amount:0.3}}
-              className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]">
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.3 }}
+                className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]"
+              >
                 <Image
                   src={"/assets/hero/typo-1.svg"}
                   fill
@@ -57,11 +58,12 @@ const Hero = () => {
               className="absolute xl:right-16 z-30"
             >
               <motion.div
-              variants={fadeIn("up",0.7)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{once:false,amount:0.3}}
-              className="w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]">
+                variants={fadeIn("up", 0.7)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.3 }}
+                className="w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]"
+              >
                 <Image
                   src={"/assets/hero/typo-2.svg"}
                   fill
@@ -76,11 +78,12 @@ const Hero = () => {
               className="hidden xl:flex absolute right-0 z-20 opacity-80"
             >
               <motion.div
-              variants={fadeIn("left",1.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{once:false,amount:0.3}}
-              className="w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity">
+                variants={fadeIn("left", 1.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.3 }}
+                className="w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity"
+              >
                 <Image
                   src={"/assets/hero/bird.png"}
                   fill
@@ -90,6 +93,14 @@ const Hero = () => {
               </motion.div>
             </MouseParallaxChild>
           </MouseParallaxContainer>
+          <TypeAnimation
+            sequence={locationSequence}
+            wrapper="div"
+            speed={10}
+            deletionSpeed={10}
+            repeat={Infinity}
+            cursor={false}
+          />
         </div>
         <div className="hidden xl:flex absolute left-0 top-0">
           <Image
