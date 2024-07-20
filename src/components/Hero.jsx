@@ -93,14 +93,30 @@ const Hero = () => {
               </motion.div>
             </MouseParallaxChild>
           </MouseParallaxContainer>
-          <TypeAnimation
-            sequence={locationSequence}
-            wrapper="div"
-            speed={10}
-            deletionSpeed={10}
-            repeat={Infinity}
-            cursor={false}
-          />
+          <div className="min-h-[60px] flex items-center justify-center mb-6">
+            <div className="hidden xl:flex items-center xl:gap-x-0">
+              <div>ایران</div>
+              <div className="relative w-2 h-2 mx-2 flex items-center justify-center">
+                <Image fill src={"/assets/hero/dot.svg"} />
+              </div>
+              <div>تور</div>
+              <div className="relative w-2 h-2 mx-2 flex items-center justify-center">
+                <Image fill src={"/assets/hero/dot.svg"} />
+              </div>
+              <div>1403</div>
+            </div>
+            <div className="hidden xl:flex items-center justify-center relative w-7 h-7 mx-4">
+              <Image fill src={"/assets/hero/mic.svg"} alt="" />
+            </div>
+            <TypeAnimation
+              sequence={locationSequence}
+              wrapper="div"
+              speed={10}
+              deletionSpeed={10}
+              repeat={Infinity}
+              cursor={false}
+            />
+          </div>
         </div>
         <div className="hidden xl:flex absolute left-0 top-0">
           <Image
