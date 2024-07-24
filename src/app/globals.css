@@ -77,7 +77,7 @@ body {
 }
 
 .rap-container {
-  @apply !p-0 
+  @apply !p-0
 }
 
 .rap-container .rap-pp-button svg {
