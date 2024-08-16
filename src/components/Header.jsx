@@ -6,6 +6,7 @@ import Link from "next/link";
 // components
 import NavMobile from "./NavMobile"
 import Nav from "./Nav";
+import MenuBtn from "./MenuBtn";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../varient";
@@ -25,17 +26,19 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed z-50 w-full ${
+      className={`fixed z-50 w-full transition-all ${
         active ? "bg-[#030315] py-6" : "bg-transparent py-8"
       } `}
     >
       <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between">
-        {/* nav */}
-        <Nav />
         {/* nav mobile */}
+        {/* nav */}
+        <Nav  containerStyles="hidden xl:flex items-center gap-x-8"/>
         <NavMobile />
         {/* menu btn */}
-        <div>menu btn</div>
+        <div>
+          <MenuBtn/>
+        </div>
         {/* socials */}
         <div>social icon</div>
         <Link
