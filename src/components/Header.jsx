@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // components
-import NavMobile from "./NavMobile"
+import NavMobile from "./NavMobile";
 import Nav from "./Nav";
 import MenuBtn from "./MenuBtn";
 
@@ -32,7 +32,7 @@ const Header = () => {
       } `}
     >
       <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between">
-      <Link
+        <Link
           href={"#"}
           className="relative flex w-[226px] h-[37.64px] transition-all mb-4 xl:mb-0"
         >
@@ -43,18 +43,20 @@ const Header = () => {
           />
         </Link>
         {/* nav */}
-        <Nav  containerStyles="hidden xl:flex items-center gap-x-8"/>
+        <Nav containerStyles="hidden xl:flex items-center gap-x-8" />
         {/* nav mobile */}
         <NavMobile />
         {/* menu btn */}
         <div className="absolute right-7 top-9 z-10 xl:hidden">
-          <MenuBtn/>
+          <MenuBtn />
         </div>
         {/* socials */}
         <div>
-          <Socials />
+          <Socials
+            containerStyles="flex gap-x-4 text-[24px]"
+            iconStyles="hover:text-accent transition-all"
+          />
         </div>
-        
       </div>
     </header>
   );
