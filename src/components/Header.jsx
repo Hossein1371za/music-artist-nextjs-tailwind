@@ -10,6 +10,7 @@ import MenuBtn from "./MenuBtn";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../varient";
+import Socials from "./Socials";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -50,7 +51,9 @@ const Header = () => {
           <MenuBtn/>
         </div>
         {/* socials */}
-        <div>social icon</div>
+        <div>
+          <Socials />
+        </div>
         
       </div>
     </header>
