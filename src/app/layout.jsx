@@ -1,7 +1,10 @@
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+
+// context
+import NavContextProvider from "@/context/NavContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,17 +12,19 @@ export const metadata = {
 };
 
 const vazirFont = localFont({
-  src:"../../public/assets/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Regular.ttf"
-})
+  src: "../../public/assets/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Regular.ttf",
+});
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`overflow-x-hidden relative${vazirFont.className}`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <NavContextProvider>
+      <html lang="en">
+        <body className={`overflow-x-hidden relative${vazirFont.className}`}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </NavContextProvider>
   );
 }
