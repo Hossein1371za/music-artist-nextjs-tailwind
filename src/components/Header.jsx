@@ -31,17 +31,7 @@ const Header = () => {
       } `}
     >
       <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between">
-        {/* nav mobile */}
-        {/* nav */}
-        <Nav  containerStyles="hidden xl:flex items-center gap-x-8"/>
-        <NavMobile />
-        {/* menu btn */}
-        <div>
-          <MenuBtn/>
-        </div>
-        {/* socials */}
-        <div>social icon</div>
-        <Link
+      <Link
           href={"#"}
           className="relative flex w-[226px] h-[37.64px] transition-all mb-4 xl:mb-0"
         >
@@ -51,6 +41,17 @@ const Header = () => {
             className="object-contain "
           />
         </Link>
+        {/* nav */}
+        <Nav  containerStyles="hidden xl:flex items-center gap-x-8"/>
+        {/* nav mobile */}
+        <NavMobile />
+        {/* menu btn */}
+        <div className="absolute right-7 top-9 z-10 xl:hidden">
+          <MenuBtn/>
+        </div>
+        {/* socials */}
+        <div>social icon</div>
+        
       </div>
     </header>
   );
