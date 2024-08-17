@@ -1,4 +1,4 @@
-"use clients";
+"use client";
 import React, { createContext, useState } from "react";
 
 export const NavContext = createContext();
