@@ -10,7 +10,10 @@ const Albums = () => {
   return (
     <section id="discography">
         <div className="container mx-auto">
-            
+            <SectionHeader pretitle="فهرست ها" title="محبوب ترین آلبوم ها"/>
+            <div>
+                <AlbumSlider/>
+            </div>
         </div>
     </section>
   )
