@@ -34,7 +34,10 @@ const AlbumSlider = () => {
                     {album.tracks?.map((track, index) => {
                       return (
                         <div key={index}>
-                          <div>{track.name}</div>
+                          <div className="flex flex-1 items-center gap-x-2 font-semibold xl:font-extrabold">
+                            <div>{track.name}</div>
+                            <div>.0{index + 1}</div>
+                          </div>
                           <div>
                             <AudioPlayer
                               style={{
@@ -47,6 +50,8 @@ const AlbumSlider = () => {
                               preload="none"
                               color="#fff"
                               volume={40}
+                              volumePlacement="bottom"
+                              className="album-player"
                             />
                           </div>
                         </div>

@@ -10,6 +10,7 @@ export default function Home() {
       <Player />
       <Events />
       <Albums />
+      <div className="h-[500px]"></div>
     </main>
   );
 }
