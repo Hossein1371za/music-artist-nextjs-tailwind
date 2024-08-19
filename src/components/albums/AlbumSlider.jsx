@@ -24,7 +24,7 @@ const AlbumSlider = () => {
 
   return (
     <>
-      <Swiper>
+      <Swiper className="album-slider">
         {data.map((album) => {
           return (
             <SwiperSlide key={album.id} className="mb-12">
@@ -33,10 +33,10 @@ const AlbumSlider = () => {
                   <div className="flex flex-1 flex-col xl:px-12">
                     {album.tracks?.map((track, index) => {
                       return (
-                        <div key={index}>
+                        <div className="flex flex-1 w-full h-[500px]" key={index}>
                           <div className="flex flex-1 items-center gap-x-2 font-semibold xl:font-extrabold">
-                            <div>{track.name}</div>
-                            <div>.0{index + 1}</div>
+                            <div className="text-sm xl:text-base">{track.name}</div>
+                            <div className="text-accent text-sm xl:text-lg">.0{index + 1}</div>
                           </div>
                           <div>
                             <AudioPlayer
