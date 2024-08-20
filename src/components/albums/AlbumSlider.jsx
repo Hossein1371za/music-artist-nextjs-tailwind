@@ -30,7 +30,9 @@ const AlbumSlider = () => {
         speed={1000}
         spaceBetween={80}
         allowTouchMove={false}
-        thumbs={{ swiper: thumbsSwiper }}
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+        }}
         modules={[FreeMode, Navigation, Thumbs, EffectCoverflow]}
         coverflowEffect={{
           rotate: 50,
@@ -96,9 +98,51 @@ const AlbumSlider = () => {
           );
         })}
       </Swiper>
-      <Swiper onSwiper={setThumbsSwiper} breakpoints={{}}>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          425: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1310: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+        }}
+        modules={[FreeMode,Navigation,Thumbs]}
+        spaceBetween={20}
+        slidesPerView={5}
+        freeMode={true}
+        watchSlidesProgress={true}
+        className="thumb-slider"
+      >
         {data?.map((thumb, index) => {
-          return <SwiperSlide key={index}>thumb</SwiperSlide>;
+          return (
+            <SwiperSlide key={index}>
+              <div className="relative w-[195px] h-[195px]">
+                <Image
+                  src={thumb.img}
+                  fill
+                  priority
+                  alt=""
+                  className="object-contain"
+                />
+              </div>
+            </SwiperSlide>
+          );
         })}
       </Swiper>
     </>
