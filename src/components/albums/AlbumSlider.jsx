@@ -131,14 +131,14 @@ const AlbumSlider = () => {
       >
         {data?.map((thumb, index) => {
           return (
-            <SwiperSlide key={index}>
-              <div className="relative w-[195px] h-[195px]">
+            <SwiperSlide key={index} className="relative group overflow-hidden border-2 border-transparent w-[254px] rounded-[10px]">
+              <div className="relative w-[195px] h-[195px] sm:w-[360px] sm:-[360px] md:w-[240px] md:max-h-[240px] cursor-pointer">
                 <Image
                   src={thumb.img}
                   fill
                   priority
                   alt=""
-                  className="object-contain"
+                  className="object-contain group-hover:scale-105 transition-all duration-300"
                 />
               </div>
             </SwiperSlide>
