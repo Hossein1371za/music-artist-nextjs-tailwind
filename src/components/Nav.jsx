@@ -5,6 +5,7 @@ const links = [
   { path: "home", name: "خانه" },
   { path: "tours", name: "تور ها" },
   { path: "discography", name: "فهرست ها" },
+  { path: "blog", name: "بلاگ ها" },
   { path: "contact", name: "ارتباط با ما" },
 ];
 
