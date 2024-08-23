@@ -16,14 +16,25 @@ const Newsletter = () => {
             pretitle="تماس با ما"
             title="در خبر نامه ما ثبت نام کنید"
           />
-          <div className="relative flex items-center w-full max-w-xl">
+          <motion.div
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.4 }}
+            className="relative flex items-center w-full max-w-xl"
+          >
             <input
               type="text"
               placeholder="ایمیل..."
               className="w-full h-[64px] outline-none rounded-full bg-primary/60 backdrop-blur-[15px] px-8"
             />
-            <button type="submit" className="bg-accent absolute left-2 h-[46px] rounded-full text-[15px] hover:bg-accent-hover transition-all px-6">مشترک شوید</button>
-          </div>
+            <button
+              type="submit"
+              className="bg-accent absolute left-2 h-[46px] rounded-full text-[15px] hover:bg-accent-hover transition-all px-6"
+            >
+              مشترک شوید
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>
