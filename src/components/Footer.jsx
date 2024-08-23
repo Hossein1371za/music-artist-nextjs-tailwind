@@ -11,7 +11,7 @@ import { fadeIn } from "../../varient";
 const Footer = () => {
   return (
     <footer className="bg-accent section h-[500px] xl:h-auto">
-      <div className="container mx-auto h-full flex flex-col item-center gap-y-8">
+      <div className="container mx-auto h-full flex flex-col items-center gap-y-8">
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
